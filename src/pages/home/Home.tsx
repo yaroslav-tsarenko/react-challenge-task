@@ -1,3 +1,12 @@
-export const Home = () => {
-    return <h1>Hello World</h1>;
+
+const Home = () => {
+    return (
+        <div className="bg-black w-150 h-150">
+            <h1>
+                hello world
+            </h1>
+        </div>
+    );
 };
+
+export default Home;
