@@ -1,7 +1,5 @@
 import { BehaviorSubject } from 'rxjs';
-import { injectable } from 'tsyringe';
 
-@injectable()
 export class AuthService {
     private authState = new BehaviorSubject<boolean>(false);
 
