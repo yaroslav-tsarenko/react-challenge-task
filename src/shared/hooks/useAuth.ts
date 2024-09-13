@@ -1,6 +1,18 @@
-import { useContext } from 'react';
-import { AuthContext } from '../../features/auth/AuthContext';
+import { useState } from 'react';
 
 export const useAuth = () => {
-    return useContext(AuthContext);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+    const login = (username: string, password: string) => {
+        if (username === 'user' && password === 'password') {
+            setIsAuthenticated(true);
+            return true;
+        }
+        return false;
+    };
+
+    return {
+        isAuthenticated,
+        login,
+    };
 };
