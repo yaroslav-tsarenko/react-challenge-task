@@ -1,7 +1,6 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useAuth } from '../../shared/hooks/useAuth';
 import { useNavigate } from '@tanstack/react-router';
-
 
 export const Login = () => {
     const { login } = useAuth();
@@ -16,10 +15,10 @@ export const Login = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-background">
+        <div id="login-container" className="flex items-center justify-center min-h-screen bg-background">
             <form onSubmit={handleSubmit} className="bg-grey p-8 rounded-lg shadow-md w-full max-w-md">
-                <h2 className="text-2xl font-bold mb-6 text-primary">Login</h2>
-                <div className="mb-4">
+                <h2 id="login-title" className="text-2xl font-bold mb-6 text-primary">Login</h2>
+                <div id="username-field" className="mb-4">
                     <label className="block text-black mb-2" htmlFor="username">Username</label>
                     <input
                         type="text"
@@ -30,7 +29,7 @@ export const Login = () => {
                         placeholder="Enter your username"
                     />
                 </div>
-                <div className="mb-6">
+                <div id="password-field" className="mb-6">
                     <label className="block text-black mb-2" htmlFor="password">Password</label>
                     <input
                         type="password"
