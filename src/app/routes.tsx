@@ -1,4 +1,3 @@
-// src/routes/routes.tsx
 import { createRootRoute, createRoute, createRouter, RouterProvider, Outlet } from '@tanstack/react-router';
 import { Home } from '../pages/home/Home.tsx';
 import { Login } from '../pages/login/Login.tsx';
